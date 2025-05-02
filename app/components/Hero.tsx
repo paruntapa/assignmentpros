@@ -6,15 +6,15 @@ import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   return (
-    <div className="w-full bg-white min-h-[calc(100vh-80px)] relative">
+    <div className="w-full bg-white min-h-[calc(100vh-80px)] relative z-0">
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[url('/pattern.png')] opacity-5 z-0"></div>
 
       {/* Main content */}
       <div className="container mx-auto px-6 md:px-12 py-12 relative z-10">
-        <div className="grid grid-cols-1 ml-10  md:ml-20 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 ml-10  md:ml-20 lg:grid-cols-12 gap-15 items-center">
           {/* Left content */}
-          <div className="lg:col-span-4 space-y-8">
+          <div className="lg:col-span-5 space-y-8">
             <div>
               <p className="text-sm font-semibold text-black/80 mb-2 "><span className='text-gray-400'>01.</span> Exclusive Help For Your UK</p>
               <h1 className="text-4xl md:text-5xl font-bold text-black/90 leading-tight mb-4">
@@ -26,12 +26,12 @@ const Hero = () => {
               </p>
             </div>
             
-            <button className="bg-black/90 text-white px-8 py-3 rounded-md font-semibold hover:bg-purple-800 transition-colors">
+            <button className="bg-black/90 text-white px-8 py-4 rounded-sm font-semibold hover:bg-purple-800 transition-colors">
               GET HELP NOW
             </button>
 
             {/* Client avatars */}
-            <div className="flex items-center space-x-4">
+            <div className="flex-col items-center space-x-4">
               <div className="flex -space-x-3">
                 <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
                   <Image
@@ -77,13 +77,13 @@ const Hero = () => {
                   +
                 </div>
               </div>
-              <p className="text-sm text-gray-600">OVER 12,640+ SUCCESSFUL CLIENTS</p>
+              <p className="text-sm font-bold text-black">OVER 12,640+ SUCCESSFUL CLIENTS</p>
             </div>
           </div>
 
           {/* Center content - Main Image */}
-          <div className="lg:col-span-4 relative">
-            <div className="relative rounded-full overflow-hidden aspect-square max-w-[600px] mx-auto">
+          <div className="lg:col-span-4 bg-amber-950 relative z-0">
+            <div className="relative rounded-full z-0 overflow-hidden aspect-square max-w-[600px] mx-auto">
               <Image
                 src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=600&fit=crop"
                 alt="Happy graduates"
@@ -93,18 +93,18 @@ const Hero = () => {
                 priority
                 unoptimized
               />
-              {/* 100% satisfaction badge */}
-              <div className="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg">
-                <div className="bg-green-50 rounded-full p-3">
-                  <p className="text-green-600 font-semibold">✓ 100%</p>
-                  <p className="text-xs text-green-600">SATISFACTION PROMISE</p>
+            </div>
+            {/* 100% satisfaction badge */}
+            <div className="absolute bottom-4 right-4 bg-white rounded-xl p-2 shadow-lg">
+                <div className="bg-green-50 rounded-md p-3">
+                  <p className="text-green-500 font-semibold text-4xl flex justify-between"><span className='text-5xl'>✓</span>100%</p>
+                  <p className="text-xs font-bold text-black">SATISFACTION PROMISE</p>
                 </div>
-              </div>
             </div>
           </div>
 
           {/* Right content - Features */}
-          <div className="lg:col-span-4 space-y-6 md:ml-25">
+          <div className="lg:col-span-3 space-y-6 ">
             <div className="flex items-center space-x-4">
               <div className="p-2 rounded-lg">
                 <AcademicCapIcon className="w-10 h-10 text-black/60" />
