@@ -82,7 +82,7 @@ const Hero = () => {
           </div>
 
           {/* Center content - Main Image */}
-          <div className="lg:col-span-4 bg-amber-950 relative z-0">
+          <div className="lg:col-span-4 relative z-0">
             <div className="relative rounded-full z-0 overflow-hidden aspect-square max-w-[600px] mx-auto">
               <Image
                 src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=600&fit=crop"
