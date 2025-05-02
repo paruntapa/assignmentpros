@@ -30,76 +30,85 @@ const Hero = () => {
               GET HELP NOW
             </button>
 
-            {/* Client avatars */}
-            <div className="flex-col items-center space-x-4">
-              <div className="flex -space-x-3">
-                <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop"
-                    alt="Client 1"
-                    width={40}
-                    height={40}
-                    className="w-full h-full object-cover"
-                    unoptimized
-                  />
-                </div>
-                <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop"
-                    alt="Client 2"
-                    width={40}
-                    height={40}
-                    className="w-full h-full object-cover"
-                    unoptimized
-                  />
-                </div>
-                <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop"
-                    alt="Client 3"
-                    width={40}
-                    height={40}
-                    className="w-full h-full object-cover"
-                    unoptimized
-                  />
-                </div>
-                <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=40&h=40&fit=crop"
-                    alt="Client 4"
-                    width={40}
-                    height={40}
-                    className="w-full h-full object-cover"
-                    unoptimized
-                  />
-                </div>
-                <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 text-sm font-semibold border-2 border-white">
-                  +
-                </div>
-              </div>
-              <p className="text-sm font-bold text-black">OVER 12,640+ SUCCESSFUL CLIENTS</p>
-            </div>
           </div>
 
           {/* Center content - Main Image */}
           <div className="lg:col-span-4 relative z-0">
             <div className="relative rounded-full z-0 overflow-hidden aspect-square max-w-[600px] mx-auto">
               <Image
-                src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=600&fit=crop"
+                src={"/center.png"}
                 alt="Happy graduates"
                 width={600}
                 height={600}
+                draggable={false}
                 className="object-cover"
                 priority
                 unoptimized
               />
+
+              
             </div>
+            {/* Graduation hat icon with green background */}
+            <div className="absolute top-8 left-2 z-20 bg-green-500 rounded-lg p-4 shadow-md">
+                <AcademicCapIcon className="w-10 h-10 text-white" />
+              </div>
+
+              {/* Client avatars */}
+                <div className="flex-col z-0 absolute bottom-10 items-center">
+                <div className="flex -space-x-3 -z-10">
+                  <div className="w-13 h-13 rounded-full border-2 border-white overflow-hidden">
+                    <Image
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop"
+                      alt="Client 1"
+                      width={50}
+                      height={50}
+                      className="w-full h-fullobject-cover"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="w-13 h-13 rounded-full border-2 border-white overflow-hidden">
+                    <Image
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop"
+                      alt="Client 2"
+                      width={50}
+                      height={50}
+                      className="w-full h-full object-cover"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="w-13 h-13 rounded-full border-2 border-white overflow-hidden">
+                    <Image
+                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop"
+                      alt="Client 3"
+                      width={50}
+                      height={50}
+                      className="w-full h-full object-cover"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="w-13 h-13 rounded-full border-2 border-white overflow-hidden">
+                    <Image
+                      src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=40&h=40&fit=crop"
+                      alt="Client 4"
+                      width={50}
+                      height={50}
+                      className="w-full h-full object-cover"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="w-13 h-13 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 text-sm font-semibold border-2 border-white">
+                    +
+                  </div>
+                </div>
+                <div className='mt-4 pt-11 bg-white shadow-xl absolute -z-12 -bottom-8 right-0.5 rounded-full py-2 px-5'>
+                  <p className="text-[10px] font-bold text-black text-center whitespace-nowrap">OVER 12400+ SUCCESSFUL CLIENTS</p>
+                </div>
+              </div>
+
             {/* 100% satisfaction badge */}
-            <div className="absolute bottom-4 right-4 bg-white rounded-xl p-2 shadow-lg">
-                <div className="bg-green-50 rounded-md p-3">
+            <div className="absolute bottom-20 right-2  bg-white rounded-xl p-3 shadow-lg">
                   <p className="text-green-500 font-semibold text-4xl flex justify-between"><span className='text-5xl'>✓</span>100%</p>
                   <p className="text-xs font-bold text-black">SATISFACTION PROMISE</p>
-                </div>
             </div>
           </div>
 
@@ -147,11 +156,13 @@ const Hero = () => {
                     <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                   </svg>
                   <span className="text-black font-bold mr-2">Trustpilot</span>
-                  <div className="flex">
+                  <div className="flex gap-0.5">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <svg key={star} className="w-5 h-5 text-green-500 fill-current" viewBox="0 0 24 24">
+                      <div className='bg-green-500 rounded-sm'>
+                      <svg key={star} className="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
                         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                       </svg>
+                      </div>
                     ))}
                   </div>
                 </div>
